@@ -1,0 +1,234 @@
+/* ========= VARIÁVEIS ========= */
+:root{
+  --accent:#d30000;
+  --bg:#f6f7fb;
+  --card:#fff;
+  --text:#333;
+  --muted:#666;
+  --radius:14px;
+}
+
+/* ========= RESET ========= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* ========= HEADER ========= */
+.header{
+  background:var(--accent);
+  padding:18px 0;
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.header-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:1.2rem;
+  height:60px;
+}
+
+/* ========= NAV ========= */
+.nav a{
+  margin:0 10px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  transition:opacity .2s;
+}
+
+.nav a:hover{
+  opacity:.7;
+}
+
+/* ========= BUTTONS ========= */
+.btn, .btn-login{
+  padding:12px 22px;
+  border-radius:var(--radius);
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+  color:#fff;
+}
+
+.primary{
+  background:var(--accent);
+}
+
+.ghost{
+  border:2px solid var(--accent);
+  color:var(--accent);
+}
+
+/* ========= HERO ========= */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:40px;
+  gap:30px;
+}
+
+.hero-text{
+  width:50%;
+}
+
+.hero-img img{
+  width:340px;
+}
+
+/* ========= ANIMAÇÕES ========= */
+.animate-up{
+  animation:slideUp .7s ease forwards;
+  opacity:0;
+}
+
+.animate-delay{
+  animation:fadeIn 1s .3s ease forwards;
+  opacity:0;
+}
+
+.animate-float{
+  animation:float 3s infinite ease-in-out;
+}
+
+@keyframes slideUp{
+  from{ transform:translateY(40px); opacity:0; }
+  to{ transform:translateY(0); opacity:1; }
+}
+
+@keyframes fadeIn{
+  from{ opacity:0; }
+  to{ opacity:1; }
+}
+
+@keyframes float{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-12px); }
+  100%{ transform:translateY(0); }
+}
+
+/* ========= FOOTER ========= */
+.footer{
+  text-align:center;
+  color:var(--muted);
+  padding:2rem 0;
+  margin-top:4rem;
+}
+
+/* ========= PÁGINAS INTERNAS ========= */
+.page{
+  margin-top:40px;
+}
+
+.page-title{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+.page-subtitle{
+  color:var(--muted);
+  margin-bottom:25px;
+}
+
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:var(--radius);
+  box-shadow:0 8px 22px rgba(0,0,0,0.06);
+  margin-bottom:18px;
+}
+
+.card h2{
+  margin-bottom:8px;
+}
+
+.card ul{
+  padding-left:18px;
+  line-height:1.6;
+}
+
+.alert{
+  padding:15px;
+  background:#fff6f6;
+  border-left:5px solid var(--accent);
+  border-radius:var(--radius);
+  margin:20px 0;
+}
+
+.next-page{
+  display:inline-block;
+  margin-top:10px;
+  padding:12px 26px;
+}
+
+/* imagens */
+.img-virus,
+.img-redes,
+.img-assedio,
+.img-boas-p{
+  height: 200px;
+  width: 60%;
+  margin: 1rem;
+}
+
+
+/* ========= RESPONSIVIDADE ========= */
+@media (max-width:900px){
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+
+  .hero-text{
+    width:100%;
+  }
+
+  .hero-img img{
+    width:260px;
+  }
+
+  .nav{
+    display:none;
+  }
+}
+
+@media (max-width:480px){
+  .logo{
+    font-size:1rem;
+  }
+
+  .card{
+    padding:16px;
+  }
+
+  .page-title{
+    font-size:1.5rem;
+  }
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login Educativo — SafeKids</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="../assets/icond.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<main class="login-container">
+
+  <div class="glass-card">
+
+    <img src="../assets/mascote-seguro.png" class="illus" alt="Mascote Seguro">
+
+    <h1>Crie uma Senha Forte</h1>
+    <p class="subtitle">Aprenda brincando como se proteger!</p>
+
+    <div class="form-control">
+      <label>Email</label>
+      <input type="email" placeholder="seuemail@email.com">
+    </div>
+
+    <div class="form-control">
+      <label>Crie sua senha</label>
+      <input type="password" id="senha" placeholder="Digite uma senha forte">
+    </div>
+
+    <div id="barra-container">
+      <div id="barra"></div>
+    </div>
+
+    <ul class="tips">
+      <li id="tamanho">• Mínimo 8 caracteres</li>
+      <li id="maiuscula">• Pelo menos 1 letra maiúscula</li>
+      <li id="numero">• Pelo menos 1 número</li>
+      <li id="especial">• Pelo menos 1 caractere especial (! @ # $ %)</li>
+    </ul>
+
+    <button id="btnEntrar" disabled>Entrar</button>
+    <p id="msg"></p>
+
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
